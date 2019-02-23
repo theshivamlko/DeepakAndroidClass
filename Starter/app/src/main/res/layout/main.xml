@@ -32,4 +32,26 @@
         android:textSize="30sp"
         android:text="Gurgaon"/>
 
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CALL"
+        android:id="@+id/call1"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/broswer"
+        android:text="Open Link"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gps"
+        android:text="GPS Setting"/>
+
+
+
 </LinearLayout>
