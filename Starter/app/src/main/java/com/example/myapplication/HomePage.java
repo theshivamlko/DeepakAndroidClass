@@ -16,6 +16,8 @@ public class HomePage extends AppCompatActivity {
     int TRY_CATCH = 10;
     private Button mSharedpref;
     private Button mDilaogs;
+    private Button mList;
+    private Button mGrid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,8 @@ public class HomePage extends AppCompatActivity {
         mTextView3 = findViewById(R.id.textView3);
         mSharedpref = findViewById(R.id.sharedpref);
         mDilaogs = findViewById(R.id.dilaogs);
+        mList = findViewById(R.id.list);
+        mGrid = findViewById(R.id.grid);
 
         mTryCatch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +52,21 @@ public class HomePage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomePage.this, MyDialogs.class);
+                startActivity(intent);
+            }
+        });
+
+        mList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomePage.this, ListsActivity.class);
+                startActivity(intent);
+            }
+        });
+        mGrid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomePage.this, GridActivity.class);
                 startActivity(intent);
             }
         });

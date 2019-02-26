@@ -12,22 +12,34 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-         android:text="TextView" />
+        android:text="TextView" />
 
     <Button
+        android:id="@+id/tryCatch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Try Catch"
-        android:id="@+id/tryCatch"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Shared Preference"
-        android:id="@+id/sharedpref"/>
+        android:text="Try Catch" />
 
     <Button
+        android:id="@+id/sharedpref"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Dialogs"
-        android:id="@+id/dilaogs"/>
+        android:text="Shared Preference" />
+
+    <Button
+        android:id="@+id/dilaogs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dialogs" />
+
+    <Button
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ListView" />
+    <Button
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GridView" />
 </LinearLayout>
