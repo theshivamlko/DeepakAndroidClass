@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -18,6 +19,7 @@ public class HomePage extends AppCompatActivity {
     private Button mDilaogs;
     private Button mList;
     private Button mGrid;
+    private Button mServices;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,7 @@ public class HomePage extends AppCompatActivity {
         mDilaogs = findViewById(R.id.dilaogs);
         mList = findViewById(R.id.list);
         mGrid = findViewById(R.id.grid);
+        mServices = findViewById(R.id.services);
 
         mTryCatch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,6 +73,20 @@ public class HomePage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        mServices.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent intent2 = new Intent(HomePage.this, MyServices.class);
+                startService(intent2);
+
+
+                Intent intent = new Intent(HomePage.this, GridActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 
