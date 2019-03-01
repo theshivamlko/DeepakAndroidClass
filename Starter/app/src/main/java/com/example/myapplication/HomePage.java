@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -20,6 +19,8 @@ public class HomePage extends AppCompatActivity {
     private Button mList;
     private Button mGrid;
     private Button mServices;
+    private Button mBrodcast;
+    private Button mSql;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,8 @@ public class HomePage extends AppCompatActivity {
         mList = findViewById(R.id.list);
         mGrid = findViewById(R.id.grid);
         mServices = findViewById(R.id.services);
+        mBrodcast = findViewById(R.id.brodcast);
+        mSql = findViewById(R.id.sql);
 
         mTryCatch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,16 +76,34 @@ public class HomePage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
         mServices.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-
                 Intent intent2 = new Intent(HomePage.this, MyServices.class);
                 startService(intent2);
 
+               /* Intent intent = new Intent(HomePage.this, GridActivity.class);
+                startActivity(intent);*/
+            }
+        });
 
-                Intent intent = new Intent(HomePage.this, GridActivity.class);
+
+        mBrodcast.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomePage.this, Broadcast.class);
+                startActivity(intent);
+            }
+        });
+
+
+        mSql.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomePage.this, SQLite.class);
                 startActivity(intent);
             }
         });

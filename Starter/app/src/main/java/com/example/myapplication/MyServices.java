@@ -35,7 +35,9 @@ public class MyServices extends IntentService {
             Log.e("MSG",i+"");
         }
 
-
+        Intent intent2=new Intent(MyServices.this,MyReceiver.class);
+        intent2.setAction("com.example.myapplication.ABC");
+        sendBroadcast(intent2);
     }
 
 

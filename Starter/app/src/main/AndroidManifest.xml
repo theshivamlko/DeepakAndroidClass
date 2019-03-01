@@ -11,8 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ListsActivity"></activity>
-        <activity android:name=".GridActivity"></activity>
+        <activity android:name=".SQLite"></activity>
+        <activity android:name=".Broadcast" />
+        <activity android:name=".ListsActivity" />
+        <activity android:name=".GridActivity" />
         <activity android:name=".MyDialogs" />
         <activity android:name=".SharedPref" />
         <activity android:name=".TryCatch" />
@@ -25,7 +27,18 @@
         </activity>
         <activity android:name=".LayoutActivity" />
         <activity android:name=".MainActivity" />
+
         <service android:name=".MyServices" />
+
+        <receiver
+            android:name=".MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.AIRPLANE_MODE" />
+                <action android:name="com.example.myapplication.ABCD" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

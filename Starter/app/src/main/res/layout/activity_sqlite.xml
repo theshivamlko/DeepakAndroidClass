@@ -5,59 +5,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".HomePage">
+    tools:context=".SQLite">
 
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-
-    <Button
-        android:id="@+id/tryCatch"
+    <EditText
+        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Try Catch" />
+        android:hint="Enter name" />
 
-    <Button
-        android:id="@+id/sharedpref"
+    <EditText
+        android:id="@+id/subject"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Shared Preference" />
+        android:hint="Enter subject" />
 
     <Button
-        android:id="@+id/dilaogs"
+        android:id="@+id/insert"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Dialogs" />
+        android:text="INSERT" />
+
 
     <Button
+        android:id="@+id/fetchAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fetch All" />
+
+
+    <EditText
+        android:id="@+id/edtsubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search subject" />
+
+    <Button
+        android:id="@+id/selectSubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select subject" />
+
+
+    <ListView
         android:id="@+id/list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ListView" />
-    <Button
-        android:id="@+id/grid"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="GridView" />
-
-
-    <Button
-        android:id="@+id/services"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Services" />
-
-    <Button
-        android:id="@+id/brodcast"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Broadcast" />
-    <Button
-        android:id="@+id/sql"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="SQL" />
+        android:layout_height="wrap_content"></ListView>
 </LinearLayout>
