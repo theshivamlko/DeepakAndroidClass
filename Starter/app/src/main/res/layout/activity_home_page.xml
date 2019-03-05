@@ -37,6 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="ListView" />
+
     <Button
         android:id="@+id/grid"
         android:layout_width="match_parent"
@@ -55,9 +56,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Broadcast" />
+
     <Button
         android:id="@+id/sql"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="SQL" />
+
+    <Button
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fragment" />
+
+    <Button
+        android:id="@+id/musicPlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PLAY" />
+
+    <Button
+        android:id="@+id/musicPause"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PAUSE" />
 </LinearLayout>
