@@ -80,4 +80,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="PAUSE" />
+
+    <Button
+        android:id="@+id/networking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Networking" />
+
 </LinearLayout>

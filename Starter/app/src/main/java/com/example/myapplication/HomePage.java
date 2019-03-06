@@ -6,6 +6,7 @@ import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -29,6 +30,7 @@ public class HomePage extends AppCompatActivity implements MediaPlayer.OnPrepare
     private Button fragment;
     private Button mMusicPlay;
     private Button mMusicPause;
+    private Button networking;
 
     MediaPlayer mediaPlayer;
 
@@ -48,10 +50,11 @@ public class HomePage extends AppCompatActivity implements MediaPlayer.OnPrepare
         fragment = findViewById(R.id.fragment);
         mSql = findViewById(R.id.sql);
 
+        networking = findViewById(R.id.networking);
         mMusicPlay = findViewById(R.id.musicPlay);
         mMusicPause = findViewById(R.id.musicPause);
 
-        mediaPlayer = new MediaPlayer();
+      /*  mediaPlayer = new MediaPlayer();
         mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
         try {
             mediaPlayer.setDataSource("https://jk9nj200-a.akamaihd.net/downloads/ringtones/files/mp3/apple-iphone-501.mp3");
@@ -62,11 +65,11 @@ public class HomePage extends AppCompatActivity implements MediaPlayer.OnPrepare
         mediaPlayer.setOnBufferingUpdateListener(new MediaPlayer.OnBufferingUpdateListener() {
             @Override
             public void onBufferingUpdate(MediaPlayer mp, int percent) {
-                Log.e("SONG",percent+" "+ mp.getCurrentPosition());
+                Log.e("SONG", percent + " " + mp.getCurrentPosition());
 
             }
         });
-        mediaPlayer.prepareAsync();
+        mediaPlayer.prepareAsync();*/
 
 
         mTryCatch.setOnClickListener(new View.OnClickListener() {
@@ -151,7 +154,7 @@ public class HomePage extends AppCompatActivity implements MediaPlayer.OnPrepare
             @Override
             public void onClick(View v) {
 
-              //  mediaPlayer.start();
+                //  mediaPlayer.start();
             }
         });
 
@@ -160,6 +163,14 @@ public class HomePage extends AppCompatActivity implements MediaPlayer.OnPrepare
             public void onClick(View v) {
 
                 mediaPlayer.pause();
+            }
+        });
+        networking.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomePage.this, Networking.class);
+                startActivity(intent);
+
             }
         });
 
@@ -179,9 +190,11 @@ public class HomePage extends AppCompatActivity implements MediaPlayer.OnPrepare
 
     @Override
     public void onPrepared(MediaPlayer mp) {
-        Log.e("onPrepared","111");
+        Log.e("onPrepared", "111");
         mp.start();
 
 
     }
+
+
 }
